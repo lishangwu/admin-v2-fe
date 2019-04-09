@@ -93,7 +93,7 @@ module.exports = {
         //     name: 'common',
         //     filename: 'js/base.js'
         // }),
-        // new CleanWebpackPlugin(),
+        new CleanWebpackPlugin(),
         
         new webpack.HotModuleReplacementPlugin(),
     ],
