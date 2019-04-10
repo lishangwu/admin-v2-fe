@@ -65,3 +65,4 @@ typings/
 node_modules
 dist
 *.log
+.idea
