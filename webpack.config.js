@@ -19,6 +19,12 @@ module.exports = {
         publicPath: '/dist/',
         filename: 'js/app.js'
     },
+    resolve: {
+        alias: {
+            page: resolve(__dirname, './src/page'),
+            component: resolve(__dirname, './src/component')
+        }
+    },
     module: {
         rules: [
             {
@@ -77,9 +83,10 @@ module.exports = {
     plugins:[
 
         new HtmlWebpackPlugin({
-            title:'Robin',
+            title:'tao bao',
             template:'./src/index.html',
             filename:'index.html',
+            favicon: './favicon.ico',
         }),
 
         //独立css文件
@@ -93,7 +100,7 @@ module.exports = {
         //     name: 'common',
         //     filename: 'js/base.js'
         // }),
-        // new CleanWebpackPlugin(),
+        new CleanWebpackPlugin(),
         
         new webpack.HotModuleReplacementPlugin(),
     ],
@@ -123,5 +130,8 @@ module.exports = {
         host:'localhost',    //服务器的ip地址
         port:1573,    //端口
         open:true,    //自动打开页面
+        historyApiFallback: {
+            index: '/dist/index.html'
+        },
     }
 }
