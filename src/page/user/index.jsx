@@ -59,7 +59,6 @@ class index extends Component {
                 <PageTitle title="用户列表" />
                 <div className="row">
                     <div className="col-md-12">
-                        <hr/>
                         <TableList tableHeads={['ID', '用户名', '邮箱', '电话', '注册时间']}>
                             {listBody}
                         </TableList>
