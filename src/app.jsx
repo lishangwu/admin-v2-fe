@@ -6,6 +6,8 @@ import Layout from 'component/layout/index.jsx'
 
 import Login from 'page/login/index.jsx'
 import Home from 'page/home/index.jsx'
+import User from 'page/user/index.jsx'
+
 
 class App extends React.Component{
     render(){
@@ -19,6 +21,7 @@ class App extends React.Component{
                                         <Route exact path='/' component={Home} />
                                         <Route exact path='/product' component={Home} />
                                         <Route exact path='/product-category' component={Home} />
+                                        <Route exact path='/user' component={User} />
                                     </Switch>
                             </Layout>
                         ) }/>
