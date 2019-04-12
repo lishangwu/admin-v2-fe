@@ -10,7 +10,7 @@ class index extends Component {
                 <PageTitle title="首页" />
                 <div className="row">
                     <div className="col-md-12">
-                        body
+                        body..
                     </div>
                 </div>
             </div>

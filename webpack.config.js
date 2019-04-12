@@ -22,7 +22,9 @@ module.exports = {
     resolve: {
         alias: {
             page: resolve(__dirname, './src/page'),
-            component: resolve(__dirname, './src/component')
+            component: resolve(__dirname, './src/component'),
+            util: resolve(__dirname, './src/util'),
+            service: resolve(__dirname, './src/service'),
         }
     },
     module: {
@@ -127,11 +129,21 @@ module.exports = {
     
     devServer:{
         // contentBase: './dist',
-        host:'localhost',    //服务器的ip地址
+        // host:'localhost',    //服务器的ip地址
         port:1573,    //端口
-        open:true,    //自动打开页面
+        // open:true,    //自动打开页面
         historyApiFallback: {
             index: '/dist/index.html'
         },
+        proxy : {
+            '/manage' : {
+                target: 'http://admintest.happymmall.com',
+                changeOrigin : true
+            },
+            '/user/logout.do' : {
+                target: 'http://admintest.happymmall.com',
+                changeOrigin : true
+            }
+        }
     }
 }
