@@ -8,8 +8,6 @@ import Pagination   from 'util/pagination/index.jsx';
 import MUtil        from 'util/mm.jsx'
 import UserService         from 'service/user-service.jsx'
 
-
-
 const _mm   = new MUtil();
 const userService = new UserService();
 
